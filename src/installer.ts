@@ -47,8 +47,9 @@ export async function getJava(
       let refs = contents.match(/<a href.*\">/gi) || [];
 
       const downloadInfo = getDownloadInfo(refs, version, javaPackage);
-
-      jdkFile = await tc.downloadTool(downloadInfo.url);
+       
+      //jdkFile = await tc.downloadTool(downloadInfo.url);
+      jdkFile = await tc.downloadTool("https://cdn.azul.com/zing-zvm/feature-preview/zing-jdk1.8.0-fp-99.99.99.99.dev-3024.tar.gz");
       version = downloadInfo.version;
       compressedFileExtension = IS_WINDOWS ? '.zip' : '.tar.gz';
     } else {
