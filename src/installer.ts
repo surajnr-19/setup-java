@@ -34,7 +34,7 @@ export async function getJava(
 ): Promise<void> {
   let toolPath = tc.find(javaPackage, version);
 
-  if (toolPath) {
+  if (false) {
     core.debug(`Tool found in cache ${toolPath}`);
   } else {
     let compressedFileExtension = '';
